@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="id" style="scroll-behavior: smooth;">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MagSentry</title>
+  <link rel="icon" type="image/png" href="logo.png" sizes="32x32">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    * { font-family: 'Inter', sans-serif; }
+    
+    html, body {
+      overscroll-behavior: none;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+    }
+    
+    .gradient-bg {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    
+    .feature-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+  <!-- Hero Section -->
+  <section class="gradient-bg min-h-screen flex items-center justify-center relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-20 left-20 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 right-20 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+    </div>
+    
+    <div class="max-w-6xl mx-auto px-4 py-20 relative z-10">
+      <div class="text-center mb-12">
+      <div class="inline-block mb-6 animate-float">
+          <div class="w-32 h-32 bg-white rounded-3xl shadow-2xl flex items-center justify-center p-3">
+            <img src="logo-magsentry.png" alt="Logo MagSentry" class="w-full h-full object-contain">
+          </div>
+        </div>
+        <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-6">
+          MagSentry
+        </h1>
+        <p class="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
+          Sistem Keamanan Pintu Kos Berbasis IoT dengan Notifikasi WhatsApp Otomatis
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="dashboard.html" class="px-8 py-4 bg-white text-purple-600 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-all shadow-xl hover:shadow-2xl">
+            🚀 Buka Dashboard
+          </a>
+          <a href="#cara-kerja" class="px-8 py-4 bg-purple-500/20 text-white rounded-xl font-semibold text-lg hover:bg-purple-500/30 transition-all backdrop-blur-sm border-2 border-white/20">
+            📖 Pelajari Lebih Lanjut
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Stats -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+        <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20">
+          <div class="text-4xl font-bold text-white mb-2">Real-time</div>
+          <div class="text-white/80">Monitoring 24/7</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20">
+          <div class="text-4xl font-bold text-white mb-2">WhatsApp</div>
+          <div class="text-white/80">Notifikasi Otomatis</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20">
+          <div class="text-4xl font-bold text-white mb-2">IoT</div>
+          <div class="text-white/80">Teknologi Terkini</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fitur Utama -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Fitur Unggulan</h2>
+        <p class="text-xl text-gray-600">Solusi keamanan modern untuk kos-kosan Anda</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="feature-card bg-white rounded-2xl p-8 border-2 border-gray-200">
+          <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-3xl mb-6">
+            📱
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Notifikasi WhatsApp</h3>
+          <p class="text-gray-600">
+            Dapatkan peringatan otomatis via WhatsApp ketika pintu/pagar terbuka terlalu lama. Atur waktu delay sesuai kebutuhan.
+          </p>
+        </div>
+
+        <div class="feature-card bg-white rounded-2xl p-8 border-2 border-gray-200">
+          <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center text-3xl mb-6">
+            🔔
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Alarm Lokal</h3>
+          <p class="text-gray-600">
+            Buzzer otomatis berbunyi saat pintu dibiarkan terbuka, memberikan peringatan langsung kepada penghuni sekitar.
+          </p>
+        </div>
+
+        <div class="feature-card bg-white rounded-2xl p-8 border-2 border-gray-200">
+          <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center text-3xl mb-6">
+            📊
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Monitoring Real-time</h3>
+          <p class="text-gray-600">
+            Pantau status pintu/pagar secara real-time melalui dashboard web. Lihat riwayat aktivitas dan statistik lengkap.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cara Kerja -->
+  <section id="cara-kerja" class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Cara Kerja Sistem</h2>
+        <p class="text-xl text-gray-600">Teknologi sederhana namun efektif</p>
+      </div>
+
+      <div class="space-y-8">
+        <div class="flex flex-col md:flex-row items-center gap-8 bg-white rounded-2xl p-8 border-2 border-gray-200">
+          <div class="flex-shrink-0 w-16 h-16 bg-blue-500 text-white rounded-2xl flex items-center justify-center text-2xl font-bold">
+            1
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Sensor Magnetik</h3>
+            <p class="text-gray-600">
+              Reed switch dipasang pada kusen pintu/pagar untuk mendeteksi status terbuka atau tertutup secara akurat.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center gap-8 bg-white rounded-2xl p-8 border-2 border-gray-200">
+          <div class="flex-shrink-0 w-16 h-16 bg-green-500 text-white rounded-2xl flex items-center justify-center text-2xl font-bold">
+            2
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Mikrokontroler IoT</h3>
+            <p class="text-gray-600">
+              WeMos D1 Mini (ESP8266) membaca data sensor dan mengirimkan status ke Firebase Realtime Database melalui Wi-Fi.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center gap-8 bg-white rounded-2xl p-8 border-2 border-gray-200">
+          <div class="flex-shrink-0 w-16 h-16 bg-purple-500 text-white rounded-2xl flex items-center justify-center text-2xl font-bold">
+            3
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Cloud & Notifikasi</h3>
+            <p class="text-gray-600">
+              Sistem monitoring memantau perubahan di Firebase dan mengirim notifikasi WhatsApp otomatis sesuai pengaturan yang telah dikonfigurasi.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Tim Pengembang</h2>
+        <p class="text-xl text-gray-600">RPL Team 6 - Inovasi untuk Keamanan Lebih Baik</p>
+      </div>
+
+      <div class="bg-gradient-to-br from-purple-50 to-blue-50 rounded-3xl p-8 md:p-12 border-2 border-purple-100">
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          
+          <div class="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+            <div class="w-32 h-32 mx-auto mb-6 relative">
+              <div class="absolute inset-0 bg-purple-200 rounded-full blur-sm opacity-50"></div>
+              <img src="foto-anggota-1.png" alt="Thariq" class="relative w-full h-full object-cover rounded-full border-4 border-white shadow-md">
+            </div>
+            <h4 class="text-xl font-bold text-gray-900 mb-2">Thariq</h4>
+            <span class="inline-block px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold">
+              Frontend & UI/UX
+            </span>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+            <div class="w-32 h-32 mx-auto mb-6 relative">
+              <div class="absolute inset-0 bg-blue-200 rounded-full blur-sm opacity-50"></div>
+              <img src="foto-anggota-2.png" alt="Rakha" class="relative w-full h-full object-cover rounded-full border-4 border-white shadow-md">
+            </div>
+            <h4 class="text-xl font-bold text-gray-900 mb-2">Rakha</h4>
+            <span class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold">
+              Hardware & Firmware
+            </span>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+            <div class="w-32 h-32 mx-auto mb-6 relative">
+              <div class="absolute inset-0 bg-green-200 rounded-full blur-sm opacity-50"></div>
+              <img src="foto-anggota-3.png" alt="Ihsanta" class="relative w-full h-full object-cover rounded-full border-4 border-white shadow-md">
+            </div>
+            <h4 class="text-xl font-bold text-gray-900 mb-2">Ihsanta</h4>
+            <span class="inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-semibold">
+              Backend & API
+            </span>
+          </div>
+
+        </div>
+
+        <div class="text-center pt-8 border-t border-purple-200/50">
+          <p class="text-gray-600 mb-6 max-w-2xl mx-auto leading-relaxed">
+            Proyek ini dikembangkan sebagai solusi praktis untuk meningkatkan keamanan lingkungan kos-kosan 
+            dengan memanfaatkan teknologi IoT dan cloud computing.
+          </p>
+          <div class="flex flex-wrap justify-center gap-3">
+            <span class="flex items-center gap-2 px-5 py-2.5 bg-white rounded-xl text-sm font-semibold text-gray-700 shadow-sm border border-gray-100">
+              🔧 ESP8266
+            </span>
+            <span class="flex items-center gap-2 px-5 py-2.5 bg-white rounded-xl text-sm font-semibold text-gray-700 shadow-sm border border-gray-100">
+              🔥 Firebase
+            </span>
+            <span class="flex items-center gap-2 px-5 py-2.5 bg-white rounded-xl text-sm font-semibold text-gray-700 shadow-sm border border-gray-100">
+              💬 WhatsApp API
+            </span>
+            <span class="flex items-center gap-2 px-5 py-2.5 bg-white rounded-xl text-sm font-semibold text-gray-700 shadow-sm border border-gray-100">
+              🌐 Web Dashboard
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 gradient-bg">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold text-white mb-6">Tertarik Menggunakan MagSentry?</h2>
+      <p class="text-xl text-white/90 mb-8">
+        Hubungi kami sekarang untuk diskusi lebih lanjut tentang keamanan kos Anda!
+      </p>
+            <a 
+        href="https://wa.me/6282320071006?text=Halo%2C%20saya%20tertarik%20dengan%20MagSentry%20dan%20ingin%20tahu%20lebih%20banyak." 
+        target="_blank"
+        class="inline-block px-10 py-5 bg-green-500 text-white rounded-xl font-bold text-lg hover:bg-green-600 transition-all shadow-2xl hover:shadow-3xl transform hover:scale-105">
+        💬 Chat Kami via WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <p class="text-gray-400">
+        © 2025 MagSentry - RPL Team 6. Dibuat dengan ❤️ untuk keamanan lebih baik.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
